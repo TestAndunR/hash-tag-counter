@@ -3,7 +3,7 @@ const kinesis = new AWS.Kinesis();
 
 exports.handler = function (event, context, callback) {
 
-	console.log("Receiveed messages for hash tags", event.body);
+	console.log("Receiveed message for hash tags", event.body);
 
 	let hashTagMessages = JSON.parse(event.body).HashTagData;
 	hashTagMessages.forEach(hashTagMessage => {
