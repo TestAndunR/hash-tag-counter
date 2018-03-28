@@ -8,7 +8,7 @@ exports.handler = function (event, context, callback) {
 	let hashTagMessages = JSON.parse(event.body).HashTagData;
 	hashTagMessages.forEach(hashTagMessage => {
 		let message = JSON.stringify(hashTagMessage);
-		console.log("HashTag message", message)
+		console.log("HashTag mssage", message)
 		kinesis.putRecord({
 			Data: message,
 			PartitionKey: 'SocialMedia',
